@@ -1,19 +1,17 @@
-let controller = new ScrollMagic.Controller();
-let timeline = new TimelineMax();
+const loginForm = document.querySelector(".login-form");
+const signupForm = document.querySelector(".signup-form");
+const loginBtn = document.querySelector(".login button");
+const signupBtn = document.querySelector(".signup button");
+const backLayer = document.querySelector(".back-layer");
 
-timeline
-  .to(".rock", 10, { y: -300 })
-  .to(".girl", 10, { y: -200 }, "-=10")
-  .fromTo(".background", { y: -50 }, { y: 0, duration: 10 }, "-=10")
-  .to(".content", 10, { top: "0%" }, "-=10")
-  .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 3 })
-  .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 });
+signupBtn.addEventListener("click", () => {
+  loginForm.classList.remove("active");
+  signupForm.classList.add("active");
+  backLayer.style.clipPath = "inset(0 0 0 50%)";
+});
 
-let scene = new ScrollMagic.Scene({
-  triggerElement: "section",
-  duration: "300%",
-  triggerHook: 0,
-})
-  .setTween(timeline)
-  .setPin("section")
-  .addTo(controller);
+loginBtn.addEventListener("click", () => {
+  signupForm.classList.remove("active");
+  loginForm.classList.add("active");
+  backLayer.style.clipPath = "";
+});

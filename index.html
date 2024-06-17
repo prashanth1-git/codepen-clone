@@ -1,59 +1,41 @@
-
-
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Form</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Parallax Website</title>
   </head>
   <body>
-    <section>
-      <nav>
-        <h4>yayavar</h4>
-        <a class="button">Sign Up</a>
-      </nav>
-      <div class="container">
-        <h2 class="main-title">Explore.</h2>
-        <img src="https://i.ibb.co/rsp6RFJ/bg1.png" class="background" alt="" />
-        <img src="https://i.ibb.co/237VsHs/girl1.png" class="girl" alt="" />
-        <img src="https://i.ibb.co/BKtjhV2/rock1.png" class="rock" alt="" />
+    <main>
+      <div class="signup">
+        <span>Not a member?</span>
+        <button type="button" class="sign-up-btn">Sign Up</button>
       </div>
-      <div class="content">
-        <div class="content-images">
-          <div>
-            <img src="https://i.ibb.co/w4N157P/haridwar.jpg" alt="" />
-            <h4>Haridwar</h4>
-            <h3>India</h3>
-          </div>
-          <div>
-            <img src="https://i.ibb.co/v4yCXYS/rishikesh.jpg" alt="" />
-            <h4>Rishikesh</h4>
-            <h3>India</h3>
-          </div>
-        </div>
-        <p class="text">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere neque
-          consequuntur a nisi, illo quia cupiditate fuga et eos minima
-          voluptatum cum dolorum quas repellat eaque beatae vitae veritatis
-          quae.
-        </p>
-        <p class="text">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere neque
-          consequuntur a nisi, illo quia cupiditate fuga et eos minima
-          voluptatum cum dolorum quas repellat eaque beatae vitae veritatis
-          quae.
-        </p>
+      <div class="login">
+        <span>Already have an account?</span>
+        <button type="button">Login</button>
       </div>
-    </section>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
-      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+
+      <div class="back-layer">
+        <form action="" class="login-form active">
+          <h2 class="login-label">Login</h2>
+          <input type="email" id="lemail" placeholder="Email" />
+          <input type="password" id="lpassword" placeholder="Password" />
+          <button type="button">Login</button>
+        </form>
+
+        <form action="" class="signup-form">
+          <h2>Sign Up</h2>
+          <input type="text" id="f-name" placeholder="First Name" />
+          <input type="text" id="l-name" placeholder="last Name" />
+          <input type="email" id="semail" placeholder="Email" />
+          <input type="password" id="spassword" placeholder="Password" />
+          <button type="button">Sign Up</button>
+        </form>
+      </div>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
